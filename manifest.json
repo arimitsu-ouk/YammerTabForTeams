@@ -18,8 +18,8 @@
             "44": "yam44.png",
             "88": "yam88.png"
     },
-    "accentColor" : "#3a91d1",
-    "configUrl": "https://www.eryem.com/wp-content/uploads/YammerTabForTeams/tabconfig.htm",
+    "accentColor" : "#ffffff",
+    "configUrl": "https://www.eryem.com/wp-content/uploads/YammerTabForTeams/tabConfigAdd.htm",
     "canUpdateConfig": true,
     "needsIdentity": false,
     "validDomains": [

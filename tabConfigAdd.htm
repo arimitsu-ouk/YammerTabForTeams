@@ -1,10 +1,16 @@
 <html>
+  <head>
+  </head>
 <body>
-What kind of Yammer feed do you want to display ?
+
 <form>
+  What kind of Yammer feed do you want to display ? <br>
   <input type="radio" name="feedtype" value="Group" onclick="onClick()"> Group<br>
-  <input type="radio" name="feedtype" value="Feed" onclick="onClick()"> Feed<br>
-  <input type="text" name="feedid" >
+  <input type="radio" name="feedtype" value="Feed" onclick="onClick()"> Feed<br><br>
+  Network name : <br>
+  <input type="text" name="networkid" ><br>
+  Feed ID : <br>
+  <input type="text" name="feedid" ><br>
 </form> 
 
 <script src="https://statics.teams.microsoft.com/sdk/v0.2/js/MicrosoftTeams.js"></script>
@@ -15,22 +21,28 @@ microsoftTeams.initialize();
 microsoftTeams.settings.registerOnSaveHandler(function(saveEvent){
 
     var radios = document.getElementsByName("feedtype");
-    var id = document.getElementsByName("feedid")[0].value;
+    var feedid = document.getElementsByName("feedid")[0].value;
+    var networkid = document.getElementsByName("networkid")[0].value;
+
     if (radios[0].checked) {
        microsoftTeams.settings.setSettings({
-         contentUrl: "https://www.eryem.com/wp-content/uploads/YammerTabForTeams/tabContentGroup.htm?feedId=" + id,
+         contentUrl: "https://www.eryem.com/wp-content/uploads/YammerTabForTeams/tabContentGroup.htm?" + 
+         "feedId=" + feedid +
+         "&networkId=" + networkid ,
          suggestedTabName: "Yammer Group",
-         websiteUrl: "https://www.eryem.com",
+         websiteUrl: "https://www.eryem.com/",
          removeUrl: "https://www.eryem.com/wp-content/uploads/YammerTabForTeams/tabremove.html",
-         customSettings: id.value
+         customSettings: feedid.value
       });
     } else {
        microsoftTeams.settings.setSettings({
-         contentUrl: "https://www.eryem.com/wp-content/uploads/YammerTabForTeams/tabContentTopic.htm?feedId=" + id,
+         contentUrl: "https://www.eryem.com/wp-content/uploads/YammerTabForTeams/tabContentTopic.htm?" + 
+         "feedId=" + feedid +
+         "&networkId=" + networkid ,
          suggestedTabName: "Yammer Feed",
-         websiteUrl: "https://www.eryem.com",
+         websiteUrl: "https://www.eryem.com/",
          removeUrl: "https://www.eryem.com/wp-content/uploads/YammerTabForTeams/tabremove.html",
-         customSettings: id.value
+         customSettings: feedid.value
       });
     }
 
@@ -42,5 +54,6 @@ function onClick() {
 }
 
 </script>
+
 </body>
 </html>

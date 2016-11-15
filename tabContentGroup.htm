@@ -22,9 +22,11 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+var networkId = getParameterByName('networkId');
 var feedId = getParameterByName('feedId');
 
 yam.connect.embedFeed({
+  "network": networkId,
   "feedType": "group",
   "feedId": feedId,
   "config": {
