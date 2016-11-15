@@ -1,0 +1,28 @@
+{
+    "$schema": "https://statics.teams.microsoft.com/sdk/v0.2/manifest/MicrosoftTeams.schema.json",
+    "manifestVersion": "0.2",
+    "id": "com.eryem.microsoftteamstabs.yammer",
+    "version": "0.4",
+    "name": "Yammer",
+    "developer": {
+        "name": "Guillaume Meyer",   
+        "websiteUrl": "https://www.linkedin.com/in/guillaumemeyer",
+        "privacyUrl": "https://www.linkedin.com/in/guillaumemeyer",
+        "termsOfUseUrl": "https://www.linkedin.com/in/guillaumemeyer"
+    },
+    "description" : {
+            "short": "A Yammer group or topic feed as a tab.",
+            "full": "Yammer Tab for Microsoft Teams brings Yammer conversation from a group or a topic feed as a Microsoft Teams tab."
+    },
+    "icons": {
+            "44": "yam44.png",
+            "88": "yam88.png"
+    },
+    "accentColor" : "#3a91d1",
+    "configUrl": "https://www.eryem.com/wp-content/uploads/YammerTabForTeams/tabconfig.htm",
+    "canUpdateConfig": true,
+    "needsIdentity": false,
+    "validDomains": [
+        "*.eryem.com"
+    ]
+}

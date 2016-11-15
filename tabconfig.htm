@@ -1,0 +1,46 @@
+<html>
+<body>
+What kind of Yammer feed do you want to display ?
+<form>
+  <input type="radio" name="feedtype" value="Group" onclick="onClick()"> Group<br>
+  <input type="radio" name="feedtype" value="Feed" onclick="onClick()"> Feed<br>
+  <input type="text" name="feedid" >
+</form> 
+
+<script src="https://statics.teams.microsoft.com/sdk/v0.2/js/MicrosoftTeams.js"></script>
+
+<script type="text/javascript">  
+
+microsoftTeams.initialize();
+microsoftTeams.settings.registerOnSaveHandler(function(saveEvent){
+
+    var radios = document.getElementsByName("feedtype");
+    var id = document.getElementsByName("feedid")[0].value;
+    if (radios[0].checked) {
+       microsoftTeams.settings.setSettings({
+         contentUrl: "https://www.eryem.com/wp-content/uploads/YammerTabForTeams/tabContentGroup.htm?feedId=" + id,
+         suggestedTabName: "Yammer Group",
+         websiteUrl: "https://www.eryem.com",
+         removeUrl: "https://www.eryem.com/wp-content/uploads/YammerTabForTeams/tabremove.html",
+         customSettings: id.value
+      });
+    } else {
+       microsoftTeams.settings.setSettings({
+         contentUrl: "https://www.eryem.com/wp-content/uploads/YammerTabForTeams/tabContentTopic.htm?feedId=" + id,
+         suggestedTabName: "Yammer Feed",
+         websiteUrl: "https://www.eryem.com",
+         removeUrl: "https://www.eryem.com/wp-content/uploads/YammerTabForTeams/tabremove.html",
+         customSettings: id.value
+      });
+    }
+
+    saveEvent.notifySuccess();
+});
+
+function onClick() {
+    microsoftTeams.settings.setValidityState(true);
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<div id="embedded-feed" style="height:700px;width:100%;"></div>
+<script type="text/javascript" src="https://s0.assets-yammer.com/assets/platform_embed.js"></script>
+<script type="text/javascript">
+
+function getParameterByName(name, url) {
+    if (!url) {
+      url = window.location.href;
+    }
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+var feedId = getParameterByName('feedId');
+
+yam.connect.embedFeed({
+  "feedType": "topic",
+  "feedId": feedId,
+  "config": {
+    "use_sso": false,
+    "header": false,
+    "footer": false,
+    "showOpenGraphPreview": false,
+    "defaultToCanonical": false,
+    "hideNetworkName": true
+  },
+  "container": "#embedded-feed"
+});
+</script>
+
+
+</body>
+</html>
