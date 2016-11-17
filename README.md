@@ -2,9 +2,11 @@
 
 Yammer Tab for Microsoft Teams brings Yammer conversation from a group or a topic feed as a Microsoft Teams tab.
 
+![Image of Yaktocat](https://www.eryem.com/wp-content/uploads/YammerTabForTeams/screenshots/YammerTabForTeams.jpg)
+
 ## Setup
 
-1. Download "YammerTabForTeams.zip"
+1. Download "YammerTabForTeams.zip" from the "Package" folder
 2. Click on your team contextual menu and select "View Team"
 3. Select the "Developer (Preview)" tab
 4. Click "Upload" and select previously downloadad zip
