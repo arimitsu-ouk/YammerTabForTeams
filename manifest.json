@@ -23,6 +23,7 @@
     "canUpdateConfig": true,
     "needsIdentity": false,
     "validDomains": [
-        "*.eryem.com"
+        "*.eryem.com",
+        "*.assets-yammer.com"
     ]
 }
