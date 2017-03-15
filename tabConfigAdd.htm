@@ -26,22 +26,22 @@ microsoftTeams.settings.registerOnSaveHandler(function(saveEvent){
 
     if (radios[0].checked) {
        microsoftTeams.settings.setSettings({
-         contentUrl: "https://www.eryem.com/wp-content/uploads/YammerTabForTeams/tabContentGroup.htm?" + 
+         contentUrl: "https://arimitsu-ouk.github.io/YammerTabForTeams/tabContentGroup.htm?" + 
          "feedId=" + feedid +
          "&networkId=" + networkid ,
          suggestedTabName: "Yammer Group",
-         websiteUrl: "https://www.eryem.com/",
-         removeUrl: "https://www.eryem.com/wp-content/uploads/YammerTabForTeams/tabremove.html",
+         websiteUrl: "https://arimitsu-ouk.github.io/",
+         removeUrl: "https://arimitsu-ouk.github.io/YammerTabForTeams//tabremove.html",
          customSettings: feedid.value
       });
     } else {
        microsoftTeams.settings.setSettings({
-         contentUrl: "https://www.eryem.com/wp-content/uploads/YammerTabForTeams/tabContentTopic.htm?" + 
+         contentUrl: "https://arimitsu-ouk.github.io/YammerTabForTeams/tabContentTopic.htm?" + 
          "feedId=" + feedid +
          "&networkId=" + networkid ,
          suggestedTabName: "Yammer Feed",
-         websiteUrl: "https://www.eryem.com/",
-         removeUrl: "https://www.eryem.com/wp-content/uploads/YammerTabForTeams/tabremove.html",
+         websiteUrl: "https://arimitsu-ouk.github.io/",
+         removeUrl: "https://arimitsu-ouk.github.io/YammerTabForTeams/tabremove.html",
          customSettings: feedid.value
       });
     }

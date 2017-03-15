@@ -19,11 +19,11 @@
             "88": "yam88.png"
     },
     "accentColor" : "#ffffff",
-    "configUrl": "https://www.eryem.com/wp-content/uploads/YammerTabForTeams/tabConfigAdd.htm",
+    "configUrl": "https://arimitsu-ouk.github.io/YammerTabForTeams//tabConfigAdd.htm",
     "canUpdateConfig": true,
     "needsIdentity": false,
     "validDomains": [
-        "*.eryem.com",
+        "arimitsu-ouk.github.io",
         "*.assets-yammer.com"
     ]
 }
