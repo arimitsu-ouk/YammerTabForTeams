@@ -1,29 +1,35 @@
 {
-    "$schema": "https://statics.teams.microsoft.com/sdk/v0.2/manifest/MicrosoftTeams.schema.json",
-    "manifestVersion": "0.2",
-    "id": "com.eryem.microsoftteamstabs.yammer",
+    "$schema": "https://statics.teams.microsoft.com/sdk/v0.4/manifest/MicrosoftTeams.schema.json",
+    "manifestVersion": "0.4",
+  "id": "5bebb729-cf47-4937-b4b2-8f9b818d96556",
     "version": "0.4",
     "name": "Yammer",
     "developer": {
-        "name": "Guillaume Meyer",   
-        "websiteUrl": "https://www.linkedin.com/in/guillaumemeyer",
-        "privacyUrl": "https://www.linkedin.com/in/guillaumemeyer",
-        "termsOfUseUrl": "https://www.linkedin.com/in/guillaumemeyer"
+        "name": "OUK",
+        "websiteUrl": "http://www.example.com",
+        "privacyUrl": "http://www.example.com/privacy",
+        "termsOfUseUrl": "http://www.example.com/termsofuse"
     },
-    "description" : {
-            "short": "A Yammer group or topic feed as a tab.",
-            "full": "Yammer Tab for Microsoft Teams brings Yammer conversation from a group or a topic feed as a Microsoft Teams tab."
-    },
-    "icons": {
-            "44": "yam44.png",
-            "88": "yam88.png"
-    },
-    "accentColor" : "#ffffff",
-    "configUrl": "https://arimitsu-ouk.github.io/YammerTabForTeams//tabConfigAdd.htm",
-    "canUpdateConfig": true,
+    "tabs": [
+        {
+  "id": "5bebb729-cf47-4937-b4b2-8f9b818d96556",
+            "name": "Yammer",
+            "description": {
+                "short": "A Yammer group or topic feed as a tab.",
+                "full": "Yammer Tab for Microsoft Teams brings Yammer conversation from a group or a topic feed as a Microsoft Teams tab."
+            },
+            "icons": {
+                "44": "yam44.png",
+                "88": "yam88.png"
+            },
+            "accentColor": "#ffffff",
+            "configUrl": "https://arimitsu-ouk.github.io/YammerTabForTeams/tabConfigAdd.htm",
+            "canUpdateConfig": true
+        }
+    ],
     "needsIdentity": false,
     "validDomains": [
-        "arimitsu-ouk.github.io",
+        "*.github.io",
         "*.assets-yammer.com"
     ]
 }
